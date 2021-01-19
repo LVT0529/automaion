@@ -16,11 +16,14 @@ search = input("(ex 검색 단어 없을시 그냥 엔터)검색할 단어를 �
 
 driver = webdriver.Chrome()
 driver.maximize_window()
-driver.get("http://211.49.171.30/cacti/index.php")
 
 
-username = "admin"
-password = "7msanwk"
+# Headless Web 설정
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
 
 elem = driver.find_element_by_name('login_username')
 elem.send_keys(username)

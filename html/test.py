@@ -104,12 +104,6 @@ def main():
     #search = input("(ex 검색 단어 없을시 그냥 엔터)검색할 단어를 입력 하세요: ")
 
     driver.maximize_window()
-    driver.get("http://211.49.171.30/cacti/index.php")
-
-    username = "admin"
-    password = "7msanwk"
-
-
 
 
     elem = driver.find_element_by_name('login_username')
